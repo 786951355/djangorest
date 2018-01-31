@@ -33,10 +33,10 @@ router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
 
 urlpatterns = [
-    #url(r'^admin/', admin.site.urls),
-    #url(r'^users/', include('users.urls')),
-    #url(r'^users/', include('django.contrib.auth.urls')),
-    #url(r'^$', views.index, name='index'),
+    url(r'^admin/', admin.site.urls),
+    url(r'^users/', include('users.urls')),
+    url(r'^users/', include('django.contrib.auth.urls')),
+    url(r'^$', views.index, name='index'),
     #url(r'^', include(router.urls)),
     #url(r'api_auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^', include('snippets.urls')),
